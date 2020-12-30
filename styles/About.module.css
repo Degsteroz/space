@@ -1,0 +1,42 @@
+.aboutContainer {
+    width: 600px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    flex-direction: row;
+    height: auto;
+    font-size: 24px;
+    color: bisque;
+    margin: 0 40px;
+}
+.layer {
+    position: absolute;
+    background-color: lightblue;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    border-radius: 10px;
+}
+.textColumn {
+    margin: 40px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.export {
+    color: chocolate;
+}
+.value {
+    color: darkgreen;
+}
+.description {
+    font-size: 24px;
+    margin-left: 20px;
+    color: blueviolet;
+}
+.image {
+    width: 250px;
+    margin: 20px 20px 20px;
+    border-radius: 10px;
+
+}

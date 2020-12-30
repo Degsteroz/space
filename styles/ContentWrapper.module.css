@@ -1,0 +1,42 @@
+.defaultStyle {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+.pidor {
+    min-width: 800px;
+    color: beige;
+    height: 10px;
+}
+
+.container {
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contentComponent {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(27,27,48,1) 100%);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: scroll;
+}
+
+.sectionScrollComponentContainer {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.contentFakeContainer {
+    position: relative;
+    width: 100vw;
+    /*height: 300vh;*/
+    overflow-y: hidden;
+}
+
