@@ -1,13 +1,12 @@
 .aboutContainer {
-    width: 600px;
+    width: 700px;
     display: flex;
     position: relative;
     justify-content: space-around;
+    align-items: center;
     flex-direction: row;
     height: auto;
-    font-size: 24px;
-    color: bisque;
-    margin: 0 40px;
+    font-size: 18px;
 }
 .layer {
     position: absolute;
@@ -19,24 +18,27 @@
     border-radius: 10px;
 }
 .textColumn {
-    margin: 40px 0 0 20px;
+    margin: 20px 0 0 20px;
     display: flex;
     flex-direction: column;
 }
-.export {
-    color: chocolate;
-}
-.value {
-    color: darkgreen;
+.title {
+    font-size: 48px;
+    color: bisque;
 }
 .description {
-    font-size: 24px;
-    margin-left: 20px;
-    color: blueviolet;
+    margin-bottom: 10px;
+}
+.description__title {
+    font-size: 14px;
+    color: bisque;
+}
+.description__value {
+    font-weight: bold;
+    color: bisque;
 }
 .image {
     width: 250px;
-    margin: 20px 20px 20px;
+    margin: 0 10px;
     border-radius: 10px;
-
 }

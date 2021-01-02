@@ -1,25 +1,36 @@
 import React from 'react'
 
-import styles from '../../styles/ContentWrapper.module.css'
+
 import About from "../sections/About"
+import PreComponent from "../sections/PreComponent"
+
+import preAbout from "../../components-data/preAbout"
+import preStack from "../../components-data/preStack"
+
+import styles from '../../styles/ContentWrapper.module.css'
+import Stack from "../sections/Stack";
 
 let fakeComponent
-let imageContainer
+let contentContainer
+let content
 
 
 const scrollHandle = function () {
     // Отслеживаем положение вертикального скролла
     // Переносим вертикальный скролл в горизонтальную плоскость проскраливаемого компонента
     // Добавляем небольшую задержку с помощью переменной pixelDelay
-    imageContainer.scroll(window.pageYOffset, 0)
+    contentContainer.scroll(window.pageYOffset, 0)
 }
 
 const startScrollComponentAnimation = function () {
     fakeComponent = document.getElementById('fakeWrapper')
-    imageContainer = document.getElementById('contentWrapper')
+    contentContainer = document.getElementById('contentWrapper')
+    content = document.getElementById('content')
 
-    // Задаём высоту фэйкконтента равную максимальному горизонтальному скролу + высоту компонента.
-    fakeComponent.style.height = `${800 * 4}px`
+
+    // Тут короче надо ещё покрутить и попробовать дойти до корректного решения.
+    // Пока захардкожено. Искомый вариант был найдем империческим путём. НУЖЕН РЕФАКТОР!!!
+    fakeComponent.style.height = `${window.innerWidth < 1350 ? 3450 : 3000}px`
 }
 
 export default class ContentWrapper extends React.Component {
@@ -45,20 +56,40 @@ export default class ContentWrapper extends React.Component {
                     id={'fakeWrapper'}
                 >
                     <div
-                        className={styles.contentComponent}
+                        className={styles.contentContainer}
                         id={'contentWrapper'}
                     >
-                        <About/>
-                        <About/>
-                        <About/>
-                        <About/>
-                        <About/>
-                        <About/>
-                        <About/>
-                        <About/>
-                        <About/>
-                        <About/>
+                        <div
+                            className={styles.sectionScrollComponentContainer}
+                            id={'content'}
+                        >
+                            <PreComponent
+                                componentData={preAbout}
+                            />
+
+                            <About/>
+
+                            <PreComponent
+                                componentData={preStack}
+                            />
+                            <Stack/>
+
+                        </div>
                     </div>
+
+                </div>
+                <div className={styles.mobileContainer}>
+                    Mobile version is not ready yet
+                    {/*<PreComponent*/}
+                    {/*    componentData={preAbout}*/}
+                    {/*/>*/}
+
+                    {/*<About/>*/}
+
+                    {/*<PreComponent*/}
+                    {/*    componentData={preStack}*/}
+                    {/*/>*/}
+                    {/*<Stack/>*/}
                 </div>
             </div>
         )

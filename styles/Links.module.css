@@ -1,0 +1,16 @@
+.linksContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin: 10px 0;
+    opacity: 0.6;
+}
+
+.contacts__image{
+    height: 30px;
+    margin: 5px 10px;
+}

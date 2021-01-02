@@ -7,13 +7,27 @@ export default function About() {
         <div className={styles.aboutContainer}>
             <div className={styles.layer}/>
             <div className={styles.textColumn}>
-                <div>
-                    <span className={styles.export}>export default </span>
-                    {'{'}
-                </div>
-                <div className={styles.description}>title: <span className={styles.value}>{sectionData.title},</span></div>
-                <div className={styles.description}>description: <span className={styles.value}>{sectionData.description}</span></div>
-                <span>{'}'}</span>
+               <span className={styles.title}>{sectionData.title}</span>
+                {
+                    sectionData.description.map(function (item) {
+                        return (
+                            <div
+                                key={item.title}
+                                className={styles.description}
+                            >
+                                <div className={styles.description__title}>{item.title}:</div>
+                                {item.link? <a
+                                    href={item.link}
+                                    target='_blank'
+                                    className={styles.description__value}
+                                >
+                                    {item.value}
+                                </a>
+                                    : <span className={styles.description__value}>{item.value}</span>}
+                            </div>
+                        )
+                    })
+                }
             </div>
             <img className={styles.image} src={sectionData.picture}/>
         </div>

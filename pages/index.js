@@ -1,29 +1,31 @@
 import Head from 'next/head'
 import ContentWrapper from '../components/ContentWrapper'
+import Links from "../components/Contacts";
 
 export default function Home() {
     return (
         <div className="container">
             <Head>
-                <title>Create Next App</title>
+                <title>degsteroz.space</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main>
-               <ContentWrapper/>
+                <ContentWrapper />
             </main>
 
             <footer>
-                <a
-                    href="https://t.me/Degster_oz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by Degster0z
-                </a>
+                <span>Powered by Degster0z</span>
+                <span>{new Date().getFullYear()}</span>
+                <Links />
             </footer>
 
             <style jsx>{`
+          @media only screen and (max-width:480px) {
+            #scroll {
+              display: none;
+            }
+          }
         .container {
           display: flex;
           flex-direction: column;
@@ -37,10 +39,12 @@ export default function Home() {
           width: 100%;
           height: 100px;
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
           position: fixed;
           bottom: 0;
+          color: bisque;
         }
 
         footer img {
