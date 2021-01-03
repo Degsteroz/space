@@ -5,6 +5,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    margin-left: 200px;
 }
 .layer {
     position: absolute;

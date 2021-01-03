@@ -30,7 +30,7 @@ const startScrollComponentAnimation = function () {
 
     // Тут короче надо ещё покрутить и попробовать дойти до корректного решения.
     // Пока захардкожено. Искомый вариант был найдем империческим путём. НУЖЕН РЕФАКТОР!!!
-    fakeComponent.style.height = `${window.innerWidth < 1350 ? 3450 : 3000}px`
+    fakeComponent.style.height = `${content.scrollWidth - window.innerHeight}px`
 }
 
 export default class ContentWrapper extends React.Component {

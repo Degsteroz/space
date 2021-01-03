@@ -3,9 +3,8 @@
     display: flex;
     position: relative;
     justify-content: space-around;
-    align-items: center;
     flex-direction: row;
-    height: auto;
+    height: max-content;
     font-size: 18px;
 }
 .layer {
@@ -18,7 +17,7 @@
     border-radius: 10px;
 }
 .textColumn {
-    margin: 20px 0 0 20px;
+    margin: 5px 0 5px 10px;
     display: flex;
     flex-direction: column;
 }
@@ -39,6 +38,6 @@
 }
 .image {
     width: 250px;
-    margin: 0 10px;
+    margin: 10px;
     border-radius: 10px;
 }
