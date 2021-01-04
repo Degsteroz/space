@@ -21,18 +21,12 @@ export default function Home() {
             </footer>
 
             <style jsx>{`
-          @media only screen and (max-width:480px) {
-            #scroll {
-              display: none;
-            }
-          }
+              
+
         .container {
           display: flex;
           flex-direction: column;
           overflow-y: hidden;
-        }
-
-        main {
         }
 
         footer {
@@ -46,16 +40,11 @@ export default function Home() {
           bottom: 0;
           color: bisque;
         }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: beige;
+        @media only screen and (max-width: 1024px) {
+            footer {
+              position: relative;
+              background-color: black;
+            }
         }
 
         a {
@@ -82,19 +71,28 @@ export default function Home() {
       `}</style>
 
             <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+                html,
+                body {
+                  padding: 0;
+                  margin: 0;
+                  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+                    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+                    sans-serif;
+                }
+                body::-webkit-scrollbar {
+                  width: 5px;
+                  height: 8px;
+                  background-color: #aaa;
+                }
+                
+                body::-webkit-scrollbar-thumb {
+                    background: #000;
+                }
+        
+                * {
+                  box-sizing: border-box;
+                }
+          `}</style>
         </div>
     )
 }

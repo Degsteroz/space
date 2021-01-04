@@ -41,3 +41,25 @@
     margin: 10px;
     border-radius: 10px;
 }
+@media only screen and (max-width:1024px) {
+    .aboutContainer {
+        width: 100%;
+        flex-direction: column;
+        justify-content: normal;
+    }
+
+    .layer {
+        z-index: 1;
+    }
+
+    .image {
+        width: 100%;
+        margin: 0;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+}

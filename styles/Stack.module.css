@@ -45,6 +45,26 @@
     margin: 0 10px;
 }
 .stack_footer {
-    margin: 40px 0;
+    margin: 10px 0;
     color: white;
+}
+
+@media only screen and (max-width:1024px) {
+    .stackContainer {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .layer {
+        z-index: 1;
+    }
+    .icon_wrapper {
+        z-index: 2;
+    }
+
+    .description {
+        width: 40%;
+    }
+    .stack_footer {
+        z-index: 2;
+    }
 }

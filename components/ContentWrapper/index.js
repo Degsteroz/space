@@ -28,8 +28,8 @@ const startScrollComponentAnimation = function () {
     content = document.getElementById('content')
 
 
-    // Тут короче надо ещё покрутить и попробовать дойти до корректного решения.
-    // Пока захардкожено. Искомый вариант был найдем империческим путём. НУЖЕН РЕФАКТОР!!!
+    // Из ширины скрола компонента вычитаем высоту видимой области.
+    // Получаем нужную высоту фейкового компонента
     fakeComponent.style.height = `${content.scrollWidth - window.innerHeight}px`
 }
 
@@ -79,17 +79,16 @@ export default class ContentWrapper extends React.Component {
 
                 </div>
                 <div className={styles.mobileContainer}>
-                    Mobile version is not ready yet
-                    {/*<PreComponent*/}
-                    {/*    componentData={preAbout}*/}
-                    {/*/>*/}
+                    <PreComponent
+                        componentData={preAbout}
+                    />
 
-                    {/*<About/>*/}
+                    <About/>
 
-                    {/*<PreComponent*/}
-                    {/*    componentData={preStack}*/}
-                    {/*/>*/}
-                    {/*<Stack/>*/}
+                    <PreComponent
+                        componentData={preStack}
+                    />
+                    <Stack/>
                 </div>
             </div>
         )

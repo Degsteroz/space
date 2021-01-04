@@ -1,1 +1,7 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+**Что это?**
+
+Условно говоря страница, на которой я балуюсь и тестирую всякое. Плюс до кучи мой маленький пэт.
+
+**Технологии**
+
+Написано на [Next.js](https://nextjs.org/learn) + CSS, JS  и ещё немного всего.
