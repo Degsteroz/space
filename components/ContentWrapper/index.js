@@ -6,6 +6,7 @@ import PreComponent from "../sections/PreComponent"
 
 import preAbout from "../../components-data/preAbout"
 import preStack from "../../components-data/preStack"
+import projects from "../../components-data/projects"
 
 import styles from '../../styles/ContentWrapper.module.css'
 import Stack from "../sections/Stack";

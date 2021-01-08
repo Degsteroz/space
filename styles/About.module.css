@@ -52,6 +52,10 @@
         z-index: 1;
     }
 
+    .textColumn {
+        z-index: 3;
+    }
+
     .image {
         width: 100%;
         margin: 0;
