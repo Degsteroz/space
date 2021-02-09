@@ -1,0 +1,79 @@
+.projectsContainer {
+    width: 900px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    flex-direction: column;
+    height: min-content;
+    font-size: 18px;
+}
+
+.layer {
+    position: absolute;
+    background-color: lightblue;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    border-radius: 10px;
+}
+
+.projects_slider {
+    width: 100%;
+    height: 90%;
+}
+
+.projects_projectWrapper {
+    padding: 0 35px;
+}
+
+.projects_title {
+    font-size: 28px;
+    color: bisque;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.projects_imageSlider {
+    margin-bottom: 25px;
+}
+
+.projects_projectImage {
+    max-width: 100%;
+}
+
+.projects_iconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px 0;
+    height: max-content;
+}
+
+.projects_icon {
+    width: 30px;
+    margin: 0 10px 0 0;
+}
+
+.projects_description {
+    color: bisque;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.projects_ghLink {
+    color: bisque;
+    text-align: center;
+}
+
+.link {
+    color: bisque;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width:1024px) {
+    .projectsContainer {
+        max-width: 100vw;
+        margin-bottom: 30px;
+    }
+}

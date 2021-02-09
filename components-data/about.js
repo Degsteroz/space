@@ -7,7 +7,7 @@ export default {
         },
         {
             title: 'Age',
-            value: (new Date).getFullYear() - 1991
+            value: (new Date).getFullYear() - ((new Date).getMonth() > 5 ?  1991 : 1992)
         },
         {
             title: 'Degree',

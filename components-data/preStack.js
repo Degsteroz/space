@@ -1,4 +1,4 @@
 export default {
-    description: 'My stack',
+    description: 'My technologies stack',
     picture: '/preStack/code.png'
 }

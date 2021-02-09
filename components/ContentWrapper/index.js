@@ -1,15 +1,16 @@
 import React from 'react'
 
 
-import About from "../sections/About"
-import PreComponent from "../sections/PreComponent"
+import About from '../sections/About'
+import PreComponent from '../sections/PreComponent'
 
-import preAbout from "../../components-data/preAbout"
-import preStack from "../../components-data/preStack"
-import projects from "../../components-data/projects"
+import preAbout from '../../components-data/preAbout'
+import preStack from '../../components-data/preStack'
+import preProjects from '../../components-data/preProjects'
 
 import styles from '../../styles/ContentWrapper.module.css'
-import Stack from "../sections/Stack";
+import Stack from '../sections/Stack'
+import Projects from '../sections/Projects'
 
 let fakeComponent
 let contentContainer
@@ -37,7 +38,7 @@ const startScrollComponentAnimation = function () {
 export default class ContentWrapper extends React.Component {
 
     componentDidMount() {
-        if (typeof (window) !== "undefined") {
+        if (typeof (window) !== 'undefined') {
             startScrollComponentAnimation()
             // Начинаем отслеживать прокрутку страницы
             window.addEventListener('scroll', scrollHandle)
@@ -45,7 +46,9 @@ export default class ContentWrapper extends React.Component {
     }
 
     componentWillUnmount() {
-        if (typeof (window) !== "undefined") {
+        // Из-за ССР необходимо делать проверку,
+        // т.к. ССР не имеет window и сборка закончится ошибкой
+        if (typeof (window) !== 'undefined') {
             window.removeEventListener('scroll', scrollHandle)
         }
     }
@@ -75,10 +78,19 @@ export default class ContentWrapper extends React.Component {
                             />
                             <Stack/>
 
+                            <PreComponent
+                                componentData={preProjects}
+                            />
+
+                            <Projects />
+
                         </div>
                     </div>
 
                 </div>
+                {/* Компонент для мобильного отображения.*/}
+                {/* Из-за логики смены направления скрола нет возможности*/}
+                {/* использовать предыдущий компонент*/}
                 <div className={styles.mobileContainer}>
                     <PreComponent
                         componentData={preAbout}
@@ -90,6 +102,12 @@ export default class ContentWrapper extends React.Component {
                         componentData={preStack}
                     />
                     <Stack/>
+
+                    <PreComponent
+                        componentData={preProjects}
+                    />
+
+                    <Projects />
                 </div>
             </div>
         )

@@ -25,7 +25,7 @@ export default function Stack() {
                 }
                 </div>
             <span className={styles.stack_footer}>
-                For more information <a href={sectionData.resumeLink} target='_blank'>click here</a>
+                For more information <a href={sectionData.resumeLink} target='_blank' className={styles.link}>click here</a>
             </span>
         </div>
     )

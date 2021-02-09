@@ -1,13 +1,18 @@
 import Head from 'next/head'
 import ContentWrapper from '../components/ContentWrapper'
-import Links from "../components/Contacts";
+import Links from '../components/Links'
 
 export default function Home() {
+    console.info('%cAND WHAT ARE YOU LOOKING AT?', 'font-size: 30px')
     return (
         <div className="container">
             <Head>
                 <title>degsteroz.space</title>
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="stylesheet" type="text/css" charSet="UTF-8"
+                      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+                <link rel="stylesheet" type="text/css"
+                      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
             </Head>
 
             <main>
@@ -48,7 +53,7 @@ export default function Home() {
         }
 
         a {
-          color: inherit;
+          color: bisque;
           text-decoration: none;
         }
         
