@@ -13,3 +13,7 @@
     height: 20px;
     margin: 5px 10px;
 }
+
+.contacts__image:hover {
+    opacity: 0.7;
+}

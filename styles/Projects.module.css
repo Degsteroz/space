@@ -1,5 +1,5 @@
 .projectsContainer {
-    width: 900px;
+    width: 700px;
     display: flex;
     position: relative;
     justify-content: space-around;
@@ -78,6 +78,6 @@
     }
 
     .projects_imageSlider {
-        height: 400px;
+        height: 100%
     }
 }
