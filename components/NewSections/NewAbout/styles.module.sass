@@ -1,0 +1,50 @@
+@import "styles/colors"
+
+.about
+  display: flex
+  position: relative
+  padding: 20px 0
+
+.about__photo
+  width: 35%
+  filter: grayscale(0.4)
+  margin-right: 30px
+
+.informationContainer__header
+  align-self: center
+
+.header__title
+  font-size: 60px
+  color: $secondTextColor
+
+.header__subtitle
+  font-size: 40px
+
+.informationWrapper
+  display: flex
+  flex-direction: column
+
+.information__title
+  font-size: 24px
+  color: $secondTextColor
+
+.header__icons
+  display: flex
+  margin-top: 30px
+
+.icons__icon
+  width: 50px
+  margin-right: 20px
+  animation: spin 15s infinite
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  50%
+    opacity: 1
+    transform: rotate(359deg)
+  60%
+    opacity: 0
+  100%
+    opacity: 1
+    transform: rotate(360deg)

@@ -1,0 +1,65 @@
+@import "styles/colors"
+@import "styles/mixins"
+
+.info
+  display: flex
+  justify-content: space-between
+  position: relative
+  padding: 20px 0
+  overflow: hidden
+
+.info__photo
+  width: 35%
+  filter: grayscale(0.6)
+  animation: photoAppear .6s ease-in-out
+  display: none
+
+@keyframes photoAppear
+  0%
+    opacity: 0
+    margin-right: -100px
+  70%
+    opacity: 1
+  100%
+    margin-right: 0
+
+.informationContainer
+  display: flex
+  max-width: 50%
+  flex-direction: column
+  margin-top: 30px
+
+.informationContainer__header
+  margin-bottom: 30px
+
+.header__title
+  @include header
+
+.informationBlock
+  font-size: 24px
+  flex-direction: column
+  background-color: rgb(255, 255, 255, 0.1)
+  padding: 10px
+  border-radius: 8px
+  animation: infoAppear .6s ease-in-out
+  display: none
+
+@keyframes infoAppear
+  0%
+    opacity: 0
+    margin-left: -100px
+  70%
+    opacity: 1
+  100%
+    margin-right: 0
+
+.informationWrapper
+  padding-left: 20px
+
+.information__title
+  text-transform: lowercase
+  color: #9b56ee
+
+.information__text
+  margin-left: 10px
+  color: coral
