@@ -12,9 +12,9 @@ export default {
             icon: 'vk.png',
             link: 'https://vk.com/urahara_kisuke'
         },
-        {
-            icon: 'instagram.png',
-            link: 'https://www.instagram.com/degster_oz/'
-        },
+        // {
+        //     icon: 'instagram.png',
+        //     link: 'https://www.instagram.com/degster_oz/'
+        // },
     ],
 }
