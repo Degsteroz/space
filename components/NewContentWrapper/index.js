@@ -19,16 +19,22 @@ export default function NewContentWrapper() {
 
     return (
         <Context.Provider value={[context, setContext]}>
-            <div className={styles.contentWrapper}>
-                <div className={styles.info__observerRoot} id={'root'}/>
-                <NewHeader />
-                <div className={styles.content}>
-                    <NewAbout/>
-                    <NewInfo/>
-                    <NewStack/>
+            <div className={styles.newWrapper}>
+                <div className={styles.contentWrapper__Mobile}>
+                    MOBILE VERSION ARE NOT READY
                 </div>
+                <div className={styles.contentWrapper}>
+                    <div className={styles.info__observerRoot} id={'root'}/>
+                    <NewHeader />
+                    <div className={styles.content}>
+                        <NewAbout/>
+                        <NewInfo/>
+                        <NewStack/>
+                    </div>
 
+                </div>
             </div>
+
         </Context.Provider>
     )
 }

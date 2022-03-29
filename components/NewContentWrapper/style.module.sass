@@ -1,4 +1,8 @@
 @import "styles/colors"
+.newWrapper
+  background-color: $background
+  color: $mainTextColor
+  font-family: 'Oswald', sans-serif
 
 .contentWrapper
   min-height: 100vh
@@ -6,7 +10,19 @@
   color: $mainTextColor
   display: flex
   justify-content: center
-  font-family: 'Oswald', sans-serif
+
+
+  @media only screen and (max-width: 768px)
+    display: none
+
+.contentWrapper__Mobile
+  display: none
+  min-height: calc(100vh - 140px)
+  font-size: 100px
+  text-align: center
+
+  @media only screen and (max-width: 768px)
+    display: flex
 
 .content
   width: 1140px
