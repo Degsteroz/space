@@ -7,10 +7,10 @@ import { Context} from '../../services/context'
 import NewHeader from '../NewSections/NewHeader'
 import NewAbout from "../NewSections/NewAbout"
 import NewInfo from '../NewSections/NewInfo'
+import NewStack from "../NewSections/NewStack"
+import NewProjects from "../NewSections/NewProjects"
 
 import styles from './style.module.sass'
-import NewStack from "../NewSections/NewStack";
-
 
 export default function NewContentWrapper() {
     const [context, setContext] = useState({
@@ -30,6 +30,7 @@ export default function NewContentWrapper() {
                         <NewAbout/>
                         <NewInfo/>
                         <NewStack/>
+                        <NewProjects/>
                     </div>
 
                 </div>
