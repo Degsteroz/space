@@ -5,6 +5,10 @@
   color: $secondTextColor
 
 @mixin bigText()
-  color: black
+  color: $mainTextColor
   font-size: 35px
   font-weight: bold
+
+@mixin baseBorder()
+  border: $mainTextColor 1px solid
+  border-radius: 8px

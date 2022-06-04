@@ -1,11 +1,11 @@
 @import "styles/mixins"
 
 .project__titleWrapper
+  @include baseBorder
   display: flex
   align-items: center
-  background-color: rgba(255, 255, 255, .7)
+
   padding-left: 10px
-  border-radius: 8px
   margin-bottom: 10px
 
 .project__title
@@ -29,6 +29,11 @@
   display: block
   max-width: 55%
   min-width: 600px
+
+.project__iconsWrapper
+  background-color: gainsboro
+  @include baseBorder
+  padding: 4px
 
 .project__icon
   width: 25px

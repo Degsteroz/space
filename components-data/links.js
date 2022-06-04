@@ -6,7 +6,7 @@ export default {
         },
         {
             icon: 'twitter.png',
-            link: 'https://twitter.com/Degster_Oz'
+            link: 'https://twitter.com/Vitaly_From_FE'
         },
         {
             icon: 'vk.png',

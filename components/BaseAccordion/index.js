@@ -30,11 +30,14 @@ export default function BaseAccordion(props) {
                                 <div className={styles.project__title}>
                                     {element.title[props.lang || 'eng']}
                                 </div>
-                                {element.stack.map(function (icon) {
-                                    return(
-                                        <img className={styles.project__icon} src={'/stack/' + icon} key={icon}/>
-                                    )
-                                })}
+                                <div className={styles.project__iconsWrapper}>
+                                    {element.stack.map(function (icon) {
+                                        return(
+                                            <img className={styles.project__icon} src={'/stack/' + icon} key={icon}/>
+                                        )
+                                    })}
+                                </div>
+
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel className={styles.project__contentWrapper}>
