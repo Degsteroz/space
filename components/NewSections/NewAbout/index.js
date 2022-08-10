@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import Image from 'next/image'
 import { Context } from '../../../services/context'
 
 import data from './data'
@@ -6,14 +7,20 @@ import styles from './styles.module.sass'
 
 export default function NewAbout() {
     const [context] = useContext(Context)
+    let displayWidth = 1440 / 3
+    if (typeof window !== 'undefined') {
+        displayWidth = window.innerWidth / 3
+    }
     const { lang } = context
     return (
         <div
             id={data.id}
             className={styles.about}
         >
-            <img
+            <Image
                 className={styles.about__photo}
+                width={displayWidth}
+                height={displayWidth * 1.2}
                 src={data.picture}
             />
             <div className={styles.informationContainer__header}>
